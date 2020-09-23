@@ -1,0 +1,40 @@
+<head>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+
+  <div id="exercise">
+    <div>
+      <h1> Lugares para vistar en Mexico </h1>
+      <button @click="toggle1 = !toggle1">Mostrar lugares</button>
+    </div>
+
+  <div v-if="toggle1">
+    <ul>
+      <li v-for="(value, key) in tipos">
+         {{ key }}
+         <ul>
+           <li v-for="(value) in value">
+            {{ value }}
+           </li>
+         </ul>
+         <br>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <script >
+    new Vue({
+      el: '#exercise',
+      data: {
+        tipos: {
+          Playas: ['Acapulco', 'Cancun', 'Puerto Vallarta'],
+          Ciudades: ['Monterrey', 'Guadalajara', 'CDMX'],
+          PuebloMagicos: ['San Miguel', 'Tequila', 'Parras'],
+        },
+
+        toggle1: false
+      }
+    });
+  </script>
