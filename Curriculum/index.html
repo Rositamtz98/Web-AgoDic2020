@@ -1,21 +1,321 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset=utf-8/>
-    <title> A01194317 </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- VueJS -->
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>4317</title>
   </head>
-  <body>
-    <p style="font-family:verdana"> Hola <br> mi nombre es Rosamaria Martinez. </p>
-    <hr>
-    <a style="font-family:verdana" href="https://www.google.com/search?q=11+de+diciembre&oq=11+de+di&aqs=chrome.1.69i64j0l7.6963j0j1&sourceid=chrome&ie=UTF-8"> naci el 11 de diciembre </a>
-    <div>
-      <img src="bday.jpg" width="200" height="200">
-      <form action="/action_page.php">
-        <br>
-        <label for="bday" style="font-family:verdana"> cuando naciste tu?</label>
-        <input type="text" id="bday" name="bday"><br>
-        <button type="button">Submit</button>
-      </form>
+  <body >
+<!-- nav bar replace
+<div class="container-fluid">
+  <div class="row">
+    <div class="col" style="background-color: #ccc"> Menu</div>
+  </div>
+</div>
+-->
+<div id=test>
+<div class="container" >
+   <nav class="navbar fixed-top navbar-light bg-light">
+     <ul class="nav nav-tabs card-header-tabs">
+       <li class="nav-item">
+         <a class="nav-link active" href="#H">Home</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="#EP">Experiencia Profesional</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="#PP">Projectos Personales</a>
+       </li>
+     </ul>
+</nav>
+</div>
+<div id=H> </div>
+<br>
+<br>
+<br>
+
+    <div class="container" style="text-align: center">
+      <h1>Rosamaria Martinez Gonzalez</h1>
     </div>
+    <div class="container" style="text-align: center">
+      <h6>rositamtz.98@gmail.com</h6>
+    </div>
+
+<div id = EP> </div>
+<br>
+<br>
+<br>
+
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+            <h5> Experiencia Profesional </h5>
+          </div>
+        </div>
+      <ul v-for="(task, id) of EP">
+      <button v-on:click="task.sh=!task.sh">{{task.name}}</button>
+      <div v-if="task.sh">
+        <div class="row">
+          <div class="col-md-8">
+            <p>{{task.name}}</p>
+          </div>
+
+          <div class="col-md-4" style="text-align: right">
+            <p>{{task.fecha}}</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>{{task.descripcion}}</p>
+          </div>
+        </div>
+        <br>
+
+      </div>
+    </ul>
+    <!--  <div class="row">
+        <div class="col-md-12">
+          <h5> Experiencia Profesional </h5>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <p> Nombre de Empresa </p>
+        </div>
+
+        <div class="col-md-4" style="text-align: right">
+          <p> Enero 2020 - Presente </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Maecenas sit amet aliquam est.
+            Donec tempus consectetur pretium.
+            Cras fringilla nec lorem aliquam ultricies.
+            Vivamus semper, nisi bibendum eleifend sagittis, dui diam fringilla tellus, accumsan pharetra urna mauris in quam.
+            Etiam efficitur cursus lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ante velit, fermentum at lobortis sit amet, mollis sed lorem.
+          </p>
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-md-8">
+          <p> Nombre de Empresa </p>
+        </div>
+
+        <div class="col-md-4" style="text-align: right">
+          <p> Enero 2019 - Enero 2020 </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Maecenas sit amet aliquam est.
+            Donec tempus consectetur pretium.
+            Cras fringilla nec lorem aliquam ultricies.
+            Vivamus semper, nisi bibendum eleifend sagittis, dui diam fringilla tellus, accumsan pharetra urna mauris in quam.
+            Etiam efficitur cursus lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ante velit, fermentum at lobortis sit amet, mollis sed lorem.
+          </p>
+        </div>
+      </div>
+    -->
+    </div>
+
+    <div id=PP></div>
+    <hr>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+            <h5> Projectos Personales </h5>
+          </div>
+        </div>
+      <ul v-for="(task, id) of PP">
+      <button v-on:click="task.sh=!task.sh">{{task.name}}</button>
+      <div v-if="task.sh">
+        <div class="row">
+          <div class="col-md-8">
+            <p>{{task.name}}</p>
+          </div>
+
+          <div class="col-md-4" style="text-align: right">
+            <p>{{task.fecha}}</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>{{task.descripcion}}</p>
+          </div>
+        </div>
+        <br>
+
+      </div>
+    </ul>
+<!--
+    <div class="row">
+      <div class="col-md-8">
+        <p> Nombre de Projecto </p>
+      </div>
+
+      <div class="col-md-4" style="text-align: right">
+        <p> Enero 2020 - Presente </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Maecenas sit amet aliquam est.
+          Donec tempus consectetur pretium.
+          Cras fringilla nec lorem aliquam ultricies.
+          Vivamus semper, nisi bibendum eleifend sagittis, dui diam fringilla tellus, accumsan pharetra urna mauris in quam.
+          Etiam efficitur cursus lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ante velit, fermentum at lobortis sit amet, mollis sed lorem.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <p> Nombre de Projecto </p>
+      </div>
+
+      <div class="col-md-4" style="text-align: right">
+        <p> Enero 2020 - Presente </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Maecenas sit amet aliquam est.
+          Donec tempus consectetur pretium.
+          Cras fringilla nec lorem aliquam ultricies.
+          Vivamus semper, nisi bibendum eleifend sagittis, dui diam fringilla tellus, accumsan pharetra urna mauris in quam.
+          Etiam efficitur cursus lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ante velit, fermentum at lobortis sit amet, mollis sed lorem.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <p> Nombre de Projecto </p>
+      </div>
+
+      <div class="col-md-4" style="text-align: right">
+        <p> Enero 2020 - Presente </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Maecenas sit amet aliquam est.
+          Donec tempus consectetur pretium.
+          Cras fringilla nec lorem aliquam ultricies.
+          Vivamus semper, nisi bibendum eleifend sagittis, dui diam fringilla tellus, accumsan pharetra urna mauris in quam.
+          Etiam efficitur cursus lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ante velit, fermentum at lobortis sit amet, mollis sed lorem.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <p> Nombre de Projecto </p>
+      </div>
+
+      <div class="col-md-4" style="text-align: right">
+        <p> Enero 2020 - Presente </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Maecenas sit amet aliquam est.
+          Donec tempus consectetur pretium.
+          Cras fringilla nec lorem aliquam ultricies.
+          Vivamus semper, nisi bibendum eleifend sagittis, dui diam fringilla tellus, accumsan pharetra urna mauris in quam.
+          Etiam efficitur cursus lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ante velit, fermentum at lobortis sit amet, mollis sed lorem.
+        </p>
+      </div>
+    </div>
+-->
+  </div>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
 </html>
+
+<script >
+
+  new Vue({
+
+    el: '#test',
+    data: {
+      EP: [{
+          name: 'Protexa',
+          id: 1,
+          fecha: 'Junio 2019 - Junio 2020',
+          descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet aliquam est. Donec tempus consectetur pretium. Cras fringilla nec lorem aliquam ultricies. Vivamus semper, nisi bibendum eleifend sagittis, dui diam fringilla tellus, accumsan pharetra urna mauris in quam. Etiam efficitur cursus lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ante velit, fermentum at lobortis sit amet, mollis sed lorem.',
+          sh: false
+        },
+        {
+          name: 'Morgan Stanley',
+          id: 2,
+          fecha: 'Junio 2020 - Agosto 2020',
+          descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet aliquam est. Donec tempus consectetur pretium. Cras fringilla nec lorem aliquam ultricies. Vivamus semper, nisi bibendum eleifend sagittis, dui diam fringilla tellus, accumsan pharetra urna mauris in quam. Etiam efficitur cursus lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ante velit, fermentum at lobortis sit amet, mollis sed lorem.',
+          sh: false
+        },
+      ],
+
+      PP:[{
+          name: 'Progranja',
+          id: 3,
+          fecha: 'Enero 2019 - Junio 2019',
+          descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet aliquam est. Donec tempus consectetur pretium. Cras fringilla nec lorem aliquam ultricies. Vivamus semper, nisi bibendum eleifend sagittis, dui diam fringilla tellus, accumsan pharetra urna mauris in quam. Etiam efficitur cursus lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ante velit, fermentum at lobortis sit amet, mollis sed lorem.',
+          sh: false
+        },
+        {
+          name: 'Tensorflow',
+          id: 4,
+          fecha: 'Sept 2018 - Sept 2018',
+          descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet aliquam est. Donec tempus consectetur pretium. Cras fringilla nec lorem aliquam ultricies. Vivamus semper, nisi bibendum eleifend sagittis, dui diam fringilla tellus, accumsan pharetra urna mauris in quam. Etiam efficitur cursus lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ante velit, fermentum at lobortis sit amet, mollis sed lorem.',
+          sh: false
+        },
+        {
+          name: 'Moviles',
+          id: 5,
+          fecha: 'Ago 2019 - Dic 2019',
+          descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet aliquam est. Donec tempus consectetur pretium. Cras fringilla nec lorem aliquam ultricies. Vivamus semper, nisi bibendum eleifend sagittis, dui diam fringilla tellus, accumsan pharetra urna mauris in quam. Etiam efficitur cursus lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ante velit, fermentum at lobortis sit amet, mollis sed lorem.',
+          sh: false
+        },
+        {
+          name: 'Web',
+          id: 6,
+          fecha: 'Ago 2020 - Presente',
+          descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet aliquam est. Donec tempus consectetur pretium. Cras fringilla nec lorem aliquam ultricies. Vivamus semper, nisi bibendum eleifend sagittis, dui diam fringilla tellus, accumsan pharetra urna mauris in quam. Etiam efficitur cursus lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ante velit, fermentum at lobortis sit amet, mollis sed lorem.',
+          sh: false
+        },
+      ]
+    }
+  });
+
+</script>
