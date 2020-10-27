@@ -59,8 +59,8 @@
           </div>
         </div>
       <ul v-for="(task, id) of EP">
-      <button v-on:click="task.sh=!task.sh">{{task.name}}</button>
-      <div v-if="task.sh">
+    <!--  <button v-on:click="task.sh=!task.sh">{{task.name}}</button>
+      <div v-if="task.sh"> -->
         <div class="row">
           <div class="col-md-8">
             <p>{{task.name}}</p>
@@ -319,3 +319,33 @@
   });
 
 </script>
+
+
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-12">
+        <h5> Experiencia Profesional </h5>
+      </div>
+    </div>
+  <ul v-for="post in posts" :key="post.id">
+    <div class="row">
+      <div class="col-md-8">
+        <p>{{post.title}}</p>
+      </div>
+
+      <div class="col-md-4" style="text-align: right">
+        <p>{{post.date}}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p>{{post.body}}</p>
+      </div>
+    </div>
+    <br>
+
+  </div>
+</ul>
+</div>
